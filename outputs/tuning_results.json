@@ -1,0 +1,34 @@
+{
+  "Linear Regression": {
+    "best_params": {
+      "regressor__fit_intercept": false
+    },
+    "best_cv_mae": 8.311215538861342,
+    "best_cv_std": 0.06465612934800472
+  },
+  "KNN": {
+    "best_params": {
+      "regressor__n_neighbors": 9,
+      "regressor__weights": "distance"
+    },
+    "best_cv_mae": 3.7821529759966137,
+    "best_cv_std": 0.029480615410658266
+  },
+  "Decision Tree": {
+    "best_params": {
+      "regressor__max_depth": null,
+      "regressor__min_samples_split": 5
+    },
+    "best_cv_mae": 3.8636111111111116,
+    "best_cv_std": 0.05666143341167266
+  },
+  "Random Forest": {
+    "best_params": {
+      "regressor__max_depth": null,
+      "regressor__min_samples_leaf": 1,
+      "regressor__n_estimators": 80
+    },
+    "best_cv_mae": 2.052244791666667,
+    "best_cv_std": 0.033728973227518125
+  }
+}

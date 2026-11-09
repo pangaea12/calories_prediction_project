@@ -1,0 +1,5 @@
+Model,MAE,RMSE,R2,Best_CV_MAE,Best_Parameters
+Random Forest,1.7133333333333334,2.681876888642231,0.9982178307065097,2.052244791666667,"{""regressor__max_depth"": null, ""regressor__min_samples_leaf"": 1, ""regressor__n_estimators"": 80}"
+KNN,3.448763185551558,4.693094571209377,0.994542548400229,3.7821529759966137,"{""regressor__n_neighbors"": 9, ""regressor__weights"": ""distance""}"
+Decision Tree,3.4143611111111105,5.17815724944695,0.993356120441159,3.8636111111111116,"{""regressor__max_depth"": null, ""regressor__min_samples_split"": 5}"
+Linear Regression,8.441513553849708,11.48894014915288,0.9672937151257295,8.311215538861342,"{""regressor__fit_intercept"": false}"
