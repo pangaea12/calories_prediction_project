@@ -1,0 +1,91 @@
+{
+  "rows_before_cleaning": 15000,
+  "columns": [
+    "User_ID",
+    "Gender",
+    "Age",
+    "Height",
+    "Weight",
+    "Duration",
+    "Heart_Rate",
+    "Body_Temp",
+    "Calories"
+  ],
+  "missing_values_before": {
+    "User_ID": 0,
+    "Gender": 0,
+    "Age": 0,
+    "Height": 0,
+    "Weight": 0,
+    "Duration": 0,
+    "Heart_Rate": 0,
+    "Body_Temp": 0,
+    "Calories": 0
+  },
+  "duplicate_rows_before": 0,
+  "rows_after_cleaning": 15000,
+  "missing_values_after": {
+    "User_ID": 0,
+    "Gender": 0,
+    "Age": 0,
+    "Height": 0,
+    "Weight": 0,
+    "Duration": 0,
+    "Heart_Rate": 0,
+    "Body_Temp": 0,
+    "Calories": 0
+  },
+  "duplicate_rows_after": 0,
+  "identifier_columns_dropped": [
+    "User_ID"
+  ],
+  "numeric_features": [
+    "Age",
+    "Height",
+    "Weight",
+    "Duration",
+    "Heart_Rate",
+    "Body_Temp"
+  ],
+  "categorical_features": [
+    "Gender"
+  ],
+  "target": "Calories",
+  "iqr_outlier_inspection": {
+    "Age": {
+      "lower_bound": -14.0,
+      "upper_bound": 98.0,
+      "outlier_count": 0
+    },
+    "Height": {
+      "lower_bound": 132.5,
+      "upper_bound": 216.5,
+      "outlier_count": 14
+    },
+    "Weight": {
+      "lower_bound": 27.0,
+      "upper_bound": 123.0,
+      "outlier_count": 6
+    },
+    "Duration": {
+      "lower_bound": -14.5,
+      "upper_bound": 45.5,
+      "outlier_count": 0
+    },
+    "Heart_Rate": {
+      "lower_bound": 65.5,
+      "upper_bound": 125.5,
+      "outlier_count": 1
+    },
+    "Body_Temp": {
+      "lower_bound": 38.1,
+      "upper_bound": 42.1,
+      "outlier_count": 369
+    },
+    "Calories": {
+      "lower_bound": -119.5,
+      "upper_bound": 292.5,
+      "outlier_count": 4
+    }
+  }
+}
