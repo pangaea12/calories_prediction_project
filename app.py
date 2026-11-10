@@ -15,9 +15,95 @@ st.set_page_config(page_title="Calories Burnt Analytics", page_icon="🔥", layo
 st.markdown("""
 <style>
 .stApp {background: linear-gradient(135deg,#0b1020 0%,#111827 55%,#17152b 100%); color:#f3f4f6;}
-[data-testid="stSidebar"] {background:#111827;}
-[data-testid="stMetric"] {background:#1f2937; border:1px solid #374151; padding:16px; border-radius:14px;}
-h1,h2,h3 {color:#e5e7eb;}
+[data-testid="stSidebar"] {
+    background: #304568;
+    color: white;
+}
+
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] div {
+    color: white !important;
+}
+/* EDA tab text color */
+.stApp button[data-baseweb="tab"] {
+    color: white !important;
+}
+
+.stApp button[data-baseweb="tab"] p {
+    color: white !important;
+}
+
+/* Selected tab */
+.stApp button[data-baseweb="tab"][aria-selected="true"] {
+    color: white !important;
+}
+[data-testid="stMetric"] {
+    background: #40577A;
+    border: 1px solid #60799D;
+    padding: 16px;
+    border-radius: 14px;
+}
+
+[data-testid="stMetric"] label,
+[data-testid="stMetric"] [data-testid="stMetricLabel"],
+[data-testid="stMetric"] [data-testid="stMetricValue"],
+[data-testid="stMetric"] [data-testid="stMetricDelta"] {
+    color: white !important;
+}
+h1,h2,h3 {color:#F54927;}
+/* EDA tabs */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: #40577A;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #40577A;
+    color: white !important;
+}
+
+.stTabs [data-baseweb="tab"] p {
+    color: white !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #60799D !important;
+}
+
+
+/* EDA numeric variable dropdown */
+.stApp label {
+    color: white !important;
+}
+
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: #40577A !important;
+    color: white !important;
+    border-color: #60799D !important;
+}
+
+[data-testid="stSelectbox"] div[data-baseweb="select"] span {
+    color: white !important;
+}
+
+[data-baseweb="popover"] ul {
+    background-color: #40577A !important;
+}
+
+[data-baseweb="popover"] li {
+    background-color: #40577A !important;
+    color: white !important;
+}
+
+[data-baseweb="popover"] li:hover {
+    background-color: #60799D !important;
+    color: white !important;
+}
+
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -51,7 +137,7 @@ if page=="Overview":
     c3.metric("Average calories",f"{df.Calories.mean():.1f}")
     c4.metric("Average duration",f"{df.Duration.mean():.1f} min")
     a,b=st.columns(2)
-    with a: st.plotly_chart(px.histogram(df,x="Calories",nbins=35,title="Calories distribution",template="plotly_dark"),use_container_width=True)
+    with a: st.plotly_chart(px.histogram(df,x="Calories",nbins=35,title="Calories distribution",template="plotly_white"),use_container_width=True)
     with b: st.plotly_chart(px.scatter(df.sample(min(2500,len(df)),random_state=42),x="Duration",y="Calories",color="Gender",title="Duration vs calories",template="plotly_dark"),use_container_width=True)
     st.dataframe(df.head(10),use_container_width=True)
 elif page=="Exploratory Data Analysis":
