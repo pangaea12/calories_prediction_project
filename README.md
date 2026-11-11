@@ -1,6 +1,6 @@
 # Calories Burnt Prediction - Machine Learning Project
 
-A complete regression project using `calories.csv`, four requested ML algorithms, a dark Streamlit dashboard, Plotly EDA, model evaluation, saved pipelines and a written report.
+A complete regression project using `calories.csv`, four requested ML algorithms, a dark Streamlit dashboard, Plotly EDA, model evaluation, saved pipelines and a written report
 
 ## Project structure
 ```text
