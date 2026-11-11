@@ -47,4 +47,4 @@ Regression metrics: MAE, RMSE and R². Model comparison is in `outputs/model_com
 - `User_ID` is an identifier and is excluded from model features.
 - IQR outliers are reported but not automatically removed because extreme workout values may be valid.
 - Preprocessing is stored inside each fitted pipeline to avoid train/test leakage.
-- Predictions are estimates and are not medical measurements.
+- Predictions are estimates and are not medical measurements
