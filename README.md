@@ -38,7 +38,7 @@ Training performs data cleaning, missing-value handling within pipelines, duplic
 ```bash
 streamlit run app.py
 ```
-Dashboard pages: Overview, EDA, Model Performance, Make a Prediction and Data Quality.
+Dashboard pages: Overview, EDA, Model Performance, Make a Prediction and Data Quality
 
 ## Evaluation
 Regression metrics: MAE, RMSE and R². Model comparison is in `outputs/model_comparison.csv`. The best model by lowest test RMSE is also saved as `models/best_model.joblib`.
